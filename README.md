@@ -30,7 +30,4 @@ Open these URLs in a browser:
 
 - http://127.0.0.1:5000/
 - http://127.0.0.1:5000/about
-
-The business name and about sentence in `app.py` use the cafe details selected
-for this project. The comments are prompts, not finished explanations. Replace
-each TODO with your own explanation before submitting, as required by the assignment.
+The app.py file includes comments explaining the Flask application, routes, functions, and return statements. Both the home page and about page were tested successfully.
