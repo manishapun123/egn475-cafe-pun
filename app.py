@@ -1,19 +1,19 @@
-# TODO: In your own words, explain why this file imports Flask.
+# fresh coffee, drinks, and delicious snacks."I import Flask so I can create a web application.
 from flask import Flask
 
-# TODO: Explain what the Flask application object is used for.
+# I create the Flask application that will run my website.
 app = Flask(__name__)
 
-# TODO: Explain how this decorator connects a URL to a function.
+# This decorator connects the home page URL to the home function.
 @app.route("/")
-# TODO: Explain when Flask calls this function.
+# Flask calls this function when someone visits the home page.
 def home():
-        # TODO: Explain what value this return statement sends to the browser.
-        return "Welcome to Manisha's Sunshine Cafe"
+    # I send this welcome message to the visitor's browser.
+    return "Welcome to Manisha's Sunshine Cafe"
 
-# TODO: Explain how this decorator connects /about to a function.
+# This decorator connects the about page URL to the about function.
 @app.route("/about")
-# TODO: Explain when Flask calls this function.
+# Flask calls this function when someone visits the about page.
 def about():
-        # TODO: Explain what value this return statement sends to the browser.
-        return "Manisha's Sunshine Cafe is a friendly neighborhood cafe serving fresh coffee, drinks, and delicious snacks."
+    # I send information about my cafe to the visitor's browser.
+        return "Manisha's Sunshine Cafe is a friendly neighborhood cafe serving fresh coffee, drinks, and delicious snacks." 
