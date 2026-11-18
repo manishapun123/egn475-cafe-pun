@@ -1,0 +1,25 @@
+
+{% extends "base.html" %}
+
+{% block title %}Order History - Café Calle Ocho{% endblock %}
+
+{% block content %}
+
+<h1>Order History</h1>
+
+<p>View previous customer orders.</p>
+
+{% for order in orders %}
+<article>
+    <h3>Order #{{ order.id }}</h3>
+    <p><strong>Customer:</strong> {{ order.customer }}</p>
+    <p><strong>Items:</strong> {{ order.items }}</p>
+    <p><strong>Pickup Time:</strong> {{ order.pickup_time }}</p>
+    <p><strong>Status:</strong> {{ order.status }}</p>
+    <p><strong>Total:</strong> ${{ "%.2f"|format(order.total_cents / 100) }}</p>
+</article>
+{% else %}
+<p>No previous orders found.</p>
+{% endfor %}
+
+{% endblock %}

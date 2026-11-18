@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+
+{% block title %}Home - Café Calle Ocho{% endblock %}
+
+{% block content %}
+
+<h1>Welcome to Café Calle Ocho!</h1>
+
+<p>Your neighborhood Cuban café in Little Havana.</p>
+
+<p>
+    Enjoy fresh coffee, delicious food, and tasty snacks.
+    We are happy to serve you!
+</p>
+
+<h2>Order Your Favorites</h2>
+
+<p>Explore our menu and place your order for pickup.</p>
+
+<a href="{{ url_for('menu') }}" role="button">View Our Menu</a>
+
+{% endblock %}

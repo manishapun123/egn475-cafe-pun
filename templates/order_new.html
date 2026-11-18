@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+
+{% block title %}Place an Order - Café Calle Ocho{% endblock %}
+
+{% block content %}
+
+<h1>Place Your Order</h1>
+
+<p>Choose your favorites and prepare your pickup order.</p>
+
+<form>
+    <label for="customer_name">Your Name</label>
+    <input type="text" id="customer_name" name="customer_name" placeholder="Enter your name">
+
+    <label for="item">Choose a Menu Item</label>
+    <select id="item" name="item">
+        {% for item in items %}
+        <option value="{{ item.id }}">
+            {{ item.name }} - ${{ "%.2f"|format(item.price_cents / 100) }}
+        </option>
+        {% endfor %}
+    </select>
+
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" name="quantity" min="1" value="1">
+
+    <label for="pickup_time">Pickup Time</label>
+    <input type="time" id="pickup_time" name="pickup_time">
+
+    <button type="button">Review Order</button>
+</form>
+
+<p><small>This is a demonstration form. Saving orders will be added in Week 4.</small></p>
+
+{% endblock %}
