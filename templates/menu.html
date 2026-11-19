@@ -11,6 +11,7 @@
 
 <div class="grid">
     {% for item in items %}
+
     <article>
         <h3>{{ item.name }}</h3>
         <p>Category: {{ item.category }}</p>
@@ -19,6 +20,9 @@
             View Details
         </a>
     </article>
+   
+    {% else %}
+    <p>No menu items available.</p>
     {% endfor %}
 </div>
 
